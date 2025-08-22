@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  font-family: "Inter", "Poppins", "sans-serif";
+  scroll-behavior: smooth;
+  --animate-duration: 2s;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  letter-spacing: 0.5px;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: currentColor;
+
+  /* :hover {
+    color: #4141ea;
+  } */
+
+  [href^="tel"] {
+    text-decoration: none;
+  }
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Only inside .content-wrapper, restore ul padding */
+.list-wrapper {
+  padding-left: 1.25rem; /* Tailwind pl-5 equivalent */
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(100ch, calc(100% - 64px))
+    1fr;
+  grid-column-gap: 32px;
+}
+
+.wrapper > * {
+  grid-column: 2;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
