@@ -4,31 +4,23 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Chude",
+    name: "Yagazie Eguare, CEO Gazmadu",
+    text: "Transformative, It would be great to see hustle & grind move from here into a CEO retreat.",
+  },
+  {
+    name: "Chude Osiegbu, CEO Venco",
     text: "It was a fantastic experience. I enjoyed sharing experiences with other founders and learning from experienced founders who are building at a scale that I aspire to.",
-  },
-  {
-    name: "Muyiwa",
-    text: "More structure, better time management. Even the hack it sessions, which were meant to be free form could do with a bit more structure. To increase the likelihood we get the value we came for.",
-  },
-  {
-    name: "Yagazie Eguare",
-    text: "It would be great to see hustle & grind move from here into a CEO retreat, so we are able to take the time off and be less distracted. Having the last 2 sessions in an enclosed space made a huge difference.",
-  },
-  {
-    name: "Adewale",
-    text: "Fantastic",
   },
 ];
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
 
-  // Autoplay every 6s
+  // Autoplay every 7s
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % testimonials.length);
-    }, 6000);
+    }, 7000);
     return () => clearInterval(interval);
   }, []);
 
@@ -44,7 +36,7 @@ export default function Testimonials() {
           What People Are Saying
         </motion.h2>
         <p className="mt-2 text-gray-400 text-lg">
-          Honest words from founders and leaders who’ve experienced it.
+          Honest words from founders who’ve experienced it.
         </p>
       </div>
 
