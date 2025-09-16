@@ -3,6 +3,7 @@ import About from "../components/About";
 import Apply from "../components/Apply";
 import Gallery from "../components/Gallery";
 import Spotlight from "../components/Spotlight";
+import Testimonials from "../components/Testimonials";
 
 function Home() {
   return (
@@ -10,6 +11,7 @@ function Home() {
       <Hero />
       <About />
       <Spotlight />
+      <Testimonials />
       <Gallery />
       <Apply />
     </div>
